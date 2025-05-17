@@ -28,12 +28,14 @@
 ### 3. Polymorphism
 <p>Kemampuan objek untuk mengambil banyak bentuk, biasanya lewat pewarisan. </p>
 <p>UserDetails userDetails = userDetailsService.loadUserByUsername(username);</p>
-<p>variabel userDetails bertipe UserDetails, tapi objek nyatanya adalah hasil implementasi dari UserDetailsServiceImpl. </p>
+<p>Pada sistem todo list variabel userDetails bertipe UserDetails, tapi objek nyatanya adalah hasil implementasi dari UserDetailsServiceImpl. </p>
 
 ### 4. Abstract
 <p>Menyembunyikan kompleksitas dan hanya menampilkan fungsionalitas penting. Biasanya diwujudkan dalam bentuk interface atau class abstract.</p>
-![image](https://github.com/user-attachments/assets/f521bd64-c372-4e1d-aec1-e2def72c412d)
-<p>UserRepository tidak mengimplementasikan method apapun secara langsung, tetapi Spring Data JPA akan menghasilkan implementasi secara otomatis di balik layar.</p>
+<p>public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByUsername(String username);
+}</p>
+<p>Pada sistem todo list UserRepository tidak mengimplementasikan method apapun secara langsung, tetapi Spring Data JPA akan menghasilkan implementasi secara otomatis di balik layar.</p>
 
 
 ## Demo Proyek
