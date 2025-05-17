@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #86b7fe;
+}
+
+.btn-primary {
+    border-radius: 999px;
+}
+
+.text-center a {
+    text-decoration: none;
+}
+
+h2, h4 {
+    font-weight: 600;
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+.card-header {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    font-size: 1.1rem;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+    padding: 1rem;
+}
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.auth-card input {
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.auth-card h2 {
+    font-weight: 600;
+}
+
+.auth-card .btn {
+    padding: 0.6rem;
+}
+
+.todo-card {
+    border-radius: 1rem;
+    background-color: #fff;
+}
+
+.todo-card h2 {
+    font-weight: 600;
+}
+
+.todo-card input,
+.todo-card textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+}
