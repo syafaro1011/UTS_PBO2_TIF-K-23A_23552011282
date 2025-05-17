@@ -40,6 +40,6 @@
 
 ## Demo Proyek
 <ul>
-  <li>Github: <a href="">Github</a></li>
+  <li>Github: <a href="https://github.com/syafaro1011/UTS_PBO2_TIF-K-23A_23552011282/tree/main">Github</a></li>
   <li>Youtube: <a href="">Youtube</a></li>
 </ul>
