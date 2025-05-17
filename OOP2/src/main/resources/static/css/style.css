@@ -109,3 +109,12 @@ h2, h4 {
     padding: 0.75rem;
     font-size: 1rem;
 }
+
+.todo-left {
+    width: 100%;
+}
+
+.todo-right {
+    white-space: nowrap;
+    margin-left: 1rem;
+}

@@ -22,24 +22,21 @@ public class ToDoController {
     @Autowired
     private UserService userService;
 
-    // 🔹 Daftar semua tugas user + detail
     @GetMapping("/todos")
     public String home(Model model, Principal principal) {
         String username = principal.getName();
         User user = userService.findByUsername(username).orElseThrow();
         model.addAttribute("todos", toDoService.getTodosByUser(user));
         model.addAttribute("username", username);
-        return "index"; // tampilkan daftar tugas dan detailnya
+        return "index"; 
     }
 
-    // 🔹 Form tambah tugas
     @GetMapping("/todos/create")
     public String showCreateForm(Model model) {
         model.addAttribute("todo", new ToDo());
-        return "create"; // form tambah
+        return "create"; 
     }
 
-    // 🔹 Simpan tugas baru
     @PostMapping("/todos/create")
     public String addTodo(@ModelAttribute ToDo todo, Principal principal) {
         String username = principal.getName();
@@ -49,7 +46,6 @@ public class ToDoController {
         return "redirect:/todos";
     }
 
-    // 🔹 Form edit tugas berdasarkan id
     @GetMapping("/todos/edit/{id}")
     public String showEditForm(@PathVariable Long id, Principal principal, Model model) {
         String username = principal.getName();
@@ -58,10 +54,9 @@ public class ToDoController {
             model.addAttribute("todo", todoOpt.get());
             return "edit";
         }
-        return "redirect:/todos"; // jika tidak valid
+        return "redirect:/todos"; 
     }
 
-    // 🔹 Simpan update tugas
     @PostMapping("/todos/edit/{id}")
     public String editTodo(@PathVariable Long id, @ModelAttribute ToDo updatedTodo, Principal principal) {
         String username = principal.getName();
@@ -76,7 +71,6 @@ public class ToDoController {
         return "redirect:/todos";
     }
 
-    // 🔹 Hapus tugas
     @PostMapping("/todos/delete/{id}")
     public String deleteTodo(@PathVariable Long id, Principal principal) {
         Optional<ToDo> todoOpt = toDoService.getTodoById(id);
@@ -90,7 +84,6 @@ public class ToDoController {
         return "redirect:/todos";
     }
 
-    // 🔹 Toggle selesai / belum
     @PostMapping("/todos/update-status/{id}")
     public String updateTodo(@PathVariable Long id, Principal principal) {
         Optional<ToDo> todoOpt = toDoService.getTodoById(id);

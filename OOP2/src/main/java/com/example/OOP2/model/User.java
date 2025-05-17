@@ -20,7 +20,6 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ToDo> todos = new ArrayList<>();
 
-    // Constructors
     public User() {}
 
     public User(String username, String password) {
